@@ -88,6 +88,36 @@ form {
   margin-bottom: 2em;
 }
 
+/* Search form */
+.search-form {
+  margin-bottom: 1.5em;
+}
+
+.search-form form {
+  display: flex;
+  margin-bottom: 1em;
+}
+
+.search-form input[type="text"] {
+  flex-grow: 1;
+  margin-bottom: 0;
+  margin-right: 10px;
+}
+
+.search-form input[type="submit"] {
+  min-width: 100px;
+}
+
+.search-form p {
+  margin-bottom: 0.5em;
+  font-size: 0.9em;
+}
+
+.search-form p:last-child {
+  color: var(--secondary-color);
+  font-style: italic;
+}
+
 label {
   display: block;
   margin-bottom: 0.5em;

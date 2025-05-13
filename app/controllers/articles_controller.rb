@@ -4,8 +4,7 @@ class ArticlesController < ApplicationController
   # GET /articles or /articles.json
   def index
     if params[:search]
-      # @articles = Article.where(confidential: false).where("title LIKE '%#{params[:search]}%'")
-      query = "SELECT * FROM articles WHERE title LIKE '%#{params[:search]}%'"
+      query = "SELECT * FROM articles WHERE confidential = false AND title LIKE '%#{params[:search]}%'"
       @articles = Article.find_by_sql(query)
     else
       @articles = Article.where(confidential: false)
